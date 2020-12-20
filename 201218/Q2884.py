@@ -14,7 +14,7 @@ adj_min = b - 45
 if adj_min < 0:
     adj_min += 60
     a = a-1
-    if a < 0:
-        a += 24
+if a < 0:
+    a += 24
 
 print(a, adj_min)

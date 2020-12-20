@@ -9,6 +9,7 @@ for i in range(1,a+1):
     result += i
 print(result)
 
+####################################
 
 b = input()
 b = int(b)

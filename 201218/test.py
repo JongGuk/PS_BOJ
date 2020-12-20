@@ -1,0 +1,6 @@
+a = input()
+b = int(input())
+c = int(input())
+print("------")
+print(a+"!!!")
+print(b+c)
