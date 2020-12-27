@@ -6,22 +6,20 @@ aabbbccb는 b가 떨어져서 나타나기 때문에 그룹 단어가 아니다.
 첫째 줄에 단어의 개수 N이 들어온다. N은 100보다 작거나 같은 자연수이다.
 둘째 줄부터 N개의 줄에 단어가 들어온다. 단어는 알파벳 소문자로만 되어있고 중복되지 않으며, 길이는 최대 100이다.
 첫째 줄에 그룹 단어의 개수를 출력한다.'''
-# N = int(input())
-# num_group_word = 0
-# for i in range(1,N+1):
-    # is_group_word = input()
-    
-is_group_word = input()
-alpha = []
-temp = ""
+N = int(input())
 count = 0
-for i in is_group_word:
-    if temp != i:
-        if i in alpha:
-            print("이미 있습니다")
-            count += 1
-    alpha.append(i)
-    temp = i
-    # print(alpha)
 
-print("")
+for case in range(1,N+1):
+    temp = "" # initialize
+    alpha = [] # initialize
+    is_group_word = input() # get test case
+    for i in is_group_word:
+        if temp != i:
+            if i in alpha:
+                #print(is_group_word,"는 그룹단어가 아닙니다. 왜냐하면",i,"가 이미 있습니다")
+                count += 1
+                break
+        alpha.append(i)
+        temp = i
+
+print("{0}".format(N-count))
